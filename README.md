@@ -1,2 +1,2 @@
 # WEB
-Records of studying about web.
+Records of studying web.
