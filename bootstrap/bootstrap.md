@@ -29,3 +29,32 @@ badge로 컴포넌트를 꾸며줄 수 있다.
     <a class="page-link" href="/2">2</a>
   </li>
 </ui>
+```
+
+### navs
+
+페이지 내에서 탭을 분리해서 보여준다. 다음과 같이 작성한다.
+
+```
+<div class="container">
+  <ul class="nav nav-tabs"> <!-- nav-pills 로도 가능 -->
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Menu1</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br/>
+      <h3>Home</h3>
+      <p>...</p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br/> <!-- fade는 탭이 바뀔때 fade out, in 효과를 준다 -->
+      <h3>Menu</h3>
+      <p>...</p>
+    </div>
+  </div>
+</div>
+```
