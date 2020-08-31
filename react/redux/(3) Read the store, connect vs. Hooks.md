@@ -178,6 +178,8 @@ const actionsCreators = {
 export default connect(null, actionCreators)(Counter);
 //or
 export default connect(null, {increment, decrementByAmount})(Counter);
+```
+
 ## useSelector()
 We learned that the wrapping the top-level component with **provider** enables its child components to access its store throughout the application.
 
