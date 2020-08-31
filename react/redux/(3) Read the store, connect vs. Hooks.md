@@ -156,7 +156,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(null, mapDispatchToProps)(Counter);
-
+```
 ### mapDispatchToProps as an object
 Dispatching Redux actions in a React component follows a similar design pattern: define an action creator, wrap it in another function that looks like
 (..args) => dispatch(actionCreator(...args)), and pass this function as a prop to the component.
