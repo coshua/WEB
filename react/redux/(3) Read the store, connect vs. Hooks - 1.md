@@ -180,4 +180,44 @@ export default connect(null, actionCreators)(Counter);
 export default connect(null, {increment, decrementByAmount})(Counter);
 ```
 
+### mergeProps?: (stateProps, dispatchProps, ownProps) => Object
+It defines how the final props for the wrapped component are determined. It you do not provide **mergeProps**, the component receives {...ownProps, ...stateProps, ...dispatchProps} by default.
+#### Parameters
+**mergeProps** should be specified with maximum of three parameters. They are the result of **mapStateToProps()**, **mapDispatchToProps**, and the component's own props, respectively. 
+#### Return
+The return value is referred to as **mergedProps** and the each field is the prop for the wrapped component.
 
+If you feel comfortable with the concept of **connect()** and how it works, you could custumize **connect()** function on your own.
+### options?: Object
+```javascript
+{
+  context?: Object,
+  pure?: boolean,
+  areStatesEqual?: Function,
+  areOwnPropsEqual?: Function,
+  areStatePropsEqual?: Function,
+  areMergedPropsEqual?: Function,
+  forwardRef?: boolean,
+}
+```
+
+#### context?: Object
+
+#### pure?: boolean
+
+### connect() Returns
+The return of the **connect()** is a wrapper function that takes your component and returns a wrapper component with the additional props it injects.
+
+### Examples
+* Inject just **dispatch** and do not subscribe to store
+`export default connect()(TodoApp)`
+
+* Inject all action creators (addTodo, completeTodo, ...) without subscribing to the store
+```
+import * as actionCreators from './actionCreators'
+
+export default connect(
+  null,
+  actionCreators
+)(TodoApp)
+```
