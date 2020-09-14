@@ -12,3 +12,16 @@ Domain Name System Server 는 도메인 이름과 ip를 기억한다.
 DNS에 접근하려면 DNS server에 대한 ip와 같은 정보가 필요하다. 여러 도메인 서버가 있으며 컴퓨터마다 개별적으로 사용하고자 하는 DNS 서버를 설정할 수 있다.
 
 무료로 이용가능한 public DNS 서버가 다양하게 제공되고 있다.
+
+### Record
+DNS 서버에서 특정 도메인에 대한 기록이 record 이다. Record type 은 nameserver, address 등이 있다.
+
+record 는 다음과 같은 구조이다. 
+
+name - type - target
+
+a record 는 최종적인 ip 주소를 가져온다. example.com 이란 domain name 목적 ip 에 다다른다면 이는 a 타입 record 이다.
+
+CNAME record 는 ip 주소를 기억하지 않고 또 다른 domain name 을 기억한다. 그래서 연쇄적으로 연결되어 최종적으로 목적지에 도달할 수 있게 한다.
+
+결국 주소는 ip로 찾아가지만 그 과정에서 사용자의 편의를 돕는 것이 cname 이라 할 수 있다.
