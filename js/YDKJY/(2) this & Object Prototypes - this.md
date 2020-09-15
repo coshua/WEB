@@ -1,6 +1,6 @@
 ### Common Mistunderstanding
 
-This does not refer to the function itself or the lexical scope of it. Basically, scope is not accessible to JS code. Than's why we cannot use a **this** reference to look something up in a lexical scope.
+'this' does not refer to the function itself or the lexical scope of it. Basically, scope is not accessible to JS code. Than's why we cannot use a **this** reference to look something up in a lexical scope.
 
 Only named function can be used to refer to the function from inside itself.
 ```javascript
@@ -42,7 +42,7 @@ var a = 2;
 foo(); // 2
 ```
 The call-site of foo() is global, so **this** points at the global object. Note that variable a is a property of the global object.
-If strict mode is in effect, the global object is not eligible for the default binding, so the this is instead set to undefined. However, the overall binding rules
+If strict mode is in effect, the global object is not eligible for the default binding, so the 'this' is instead set to undefined. However, the overall binding rules
 are entirely based on the call-site, so the global object is only eligible
 for the default binding if the contents of foo() are not running in strict mode. The strict mode state of the call-site of foo() is
 irrelevant:
