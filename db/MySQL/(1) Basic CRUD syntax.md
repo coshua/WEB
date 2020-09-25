@@ -38,4 +38,6 @@ CREATE TABLE table1(
 `UPDATE topic SET description='changed',title='new title' WHERE id=2;`
 
 #### Delete
-`DELETE FROM topic WHERE id=1;`
+`DELETE FROM topic WHERE id=1;` // to remove table contents
+
+`DROP TABLE topic` //to remove table container
