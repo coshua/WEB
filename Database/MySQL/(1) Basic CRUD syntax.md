@@ -40,4 +40,6 @@ CREATE TABLE table1(
 #### Delete
 `DELETE FROM topic WHERE id=1;` // to remove table contents
 
+`TRUNCATE TABLE topic` // to remove the whole contents and remain container
+
 `DROP TABLE topic` //to remove table container
