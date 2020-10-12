@@ -4,3 +4,8 @@ To use threads and prevent our rendering from blocking by certain js codes(ex. a
 `<script async>` `<script defer>`
 
 ### Minimize DOM manipulation
+
+Below useful sources help figuring out our website performance and tell how to enhance the performance.
+
+PageSpeed
+WebPageTest
