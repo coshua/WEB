@@ -1,0 +1,1 @@
+To determine whether the application is rendered client-side or server-side, you should consider this question: 'Where do you want the work to happen?'
